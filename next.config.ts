@@ -1,5 +1,11 @@
 import type { NextConfig } from "next";
 
+// module.exports = {
+//   logging: {
+//     browserToTerminal: true,
+//   },
+// }
+
 const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
@@ -8,6 +14,7 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
+    root: __dirname,
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
